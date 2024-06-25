@@ -17,6 +17,11 @@ def request_option(cant):
         raise Exception(f"Wrong option {option}. Should be one of: {available}")
     return option
 
+def menu(options):
+    print_menu(options)
+    option = request_option(len(options))
+    return option
+
 def handle_option(option, number1, number2):
     if option == 1:
         print(f"The first number is {number1} the second number is {number2} and their sum is: {number1+number2}.")
