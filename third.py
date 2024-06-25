@@ -10,8 +10,11 @@ def print_menu(options):
         print(f"{index}. {option}")
         index+=1
 
-def request_option():
+def request_option(cant):
     option = int(input("Enter an option: "))
+    available = list(range(1,cant+1))
+    if(option not in available):
+        raise Exception(f"Wrong option {option}. Should be one of: {available}")
     return option
 
 def handle_option(option, number1, number2):
@@ -30,7 +33,7 @@ def main():
     ]
     (number1, number2) = request_numbers()
     print_menu(options)
-    option = request_option()
+    option = request_option(len(options))
     handle_option(option, number1, number2)
 
 if __name__ == "__main__":
