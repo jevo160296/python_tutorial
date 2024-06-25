@@ -1,26 +1,22 @@
 # Instructions
-1. Open a terminal window and copy the following commands
-~~~shell
-git init
-pipenv shell
-~~~
-
-2. Create a new file called main.py
-3. Open the folder in VSCode
-4. Copy the following code in main.py
+1. Open *main.py* and replace the code with the following
 ~~~python
 def main():
-    print("Hello python")
+    name = input("Enter your name: ")
+    print(f"Hello {name}.")
 
 if __name__ == "__main__":
     main()
 ~~~
-5. Copy the following command in the terminal window
+2. Open a terminal window in the folder and copy the following command
 ~~~shell
 python -m main
 ~~~
 
-Hit enter, you should see the following appear in the terminal window
+3. In the window you should see a prompt asking for your name, enter your name and press enter
+
+You should see the following:
 ~~~shell
-Hello python
+Enter your name {your name}
+Hello {your name}.
 ~~~
