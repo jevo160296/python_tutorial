@@ -3,13 +3,12 @@ def request_numbers():
     number2 = int(input("Enter another number: "))
     return number1, number2
 
-def print_menu():
+def print_menu(options):
     print("-------------------------------------")
-    print("""
-          1. To sum the numbers
-          2. To multiply the numbers
-          3. To calculate the difference          
-          """)
+    index = 1
+    for option in options:
+        print(f"{index}. {option}")
+        index+=1
 
 def request_option():
     option = int(input("Enter an option: "))
@@ -24,8 +23,13 @@ def handle_option(option, number1, number2):
         print(f"The first number is {number1} the second number is {number2} and their difference is: {number1-number2}.")
 
 def main():
+    options = [
+        "To sum the numbers",
+        "To multiply the numbers",
+        "To calculate the difference"
+    ]
     (number1, number2) = request_numbers()
-    print_menu()
+    print_menu(options)
     option = request_option()
     handle_option(option, number1, number2)
 
