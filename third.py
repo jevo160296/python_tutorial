@@ -14,7 +14,7 @@ def request_option(cant):
     option = int(input("Enter an option: "))
     available = list(range(1,cant+1))
     if(option not in available):
-        raise Exception(f"Wrong option {option}. Should be one of: {available}")
+        raise ValueError(f"Wrong option {option}. Should be one of: {available}")
     return option
 
 def menu(options):
